@@ -9,7 +9,7 @@
 <meta name="author" content="Eszter Ari">
 <meta name="dcterms.date" content="2026-03-27">
 
-<title>Analysis of OMICS data, practical 8</title>
+<title>Analysis of OMICS data, practical 7</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -2272,7 +2272,7 @@ vertical-align: -.125em;
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Analysis of OMICS data, practical 8</h1>
+<h1 class="title">Analysis of OMICS data, practical 7</h1>
 <p class="subtitle lead">Transcriptomics part 1</p>
 </div>
 
@@ -2377,7 +2377,7 @@ vertical-align: -.125em;
 <li>Download this <u>fastq</u> file using the <code>fastq-dump</code> command of <code>sratoolkit</code>. You can type and save such commands to your <em>Shell Script</em> file. (Check the details in the materials of <em>Practical 5: Genomics part 3</em>)</li>
 </ol>
 <p>Create a <em>0000_fastq</em> directory, and download the <u>fastq</u> files there.</p>
-<p><em><strong>This could take more than an hour</strong>, so if you don’t want to wait for that, you can find the unzipped files here: <code>/shared/Transcriptomics_part_1/0000_fastq/</code></em></p>
+<p><em><strong>This could take more than an hour</strong>, so if you don’t want to wait for that, you can find the unzipped files here: <code>/shared/OMICS/practical_07/0000_fastq/</code></em></p>
 <p><em>Instead of copying the files, please just <strong>create a symbolic link</strong> to them.</em></p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2678,7 +2678,7 @@ vertical-align: -.125em;
 <p>Since we don’t want to wait a lot, we will map the subsampled reads to <strong>chromosome 1</strong> only. <span style="color:red">WARNING</span>: Do not do this on <em>real samples</em>!</p>
 <ol type="1">
 <li>Create a directory called <em>0004_genome</em>.</li>
-<li>Create a symbolic link to this directory of chromosome 1 of the human genome version <em>GRCh38</em> (which had been downloaded from here: <a href="ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.1.fa.gz" class="uri">ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.1.fa.gz</a>). The location of the <u>fasta</u> file is this: <code>/shared/08_Transcriptomics_part_1/0004_genome/</code></li>
+<li>Create a symbolic link to this directory of chromosome 1 of the human genome version <em>GRCh38</em> (which had been downloaded from here: <a href="ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.1.fa.gz" class="uri">ftp://ftp.ensembl.org/pub/release-99/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.1.fa.gz</a>). The location of the <u>fasta</u> file is this: <code>/shared/OMICS/practical_07/0004_genome/</code></li>
 <li>Create a symbolic link to the <u>GTF</u> file (which had been downloaded from here: <a href="#0" class="uri">ftp://ftp.ensembl.org/pub/release-99/gtf/homo_sapiens/Homo_sapiens.GRCh38.99.gtf.gz</a> and then chromosome 1 was filtered) as well.</li>
 </ol>
 </section>
@@ -2762,7 +2762,7 @@ vertical-align: -.125em;
 <ol type="1">
 <li>Open <code>IGV</code> and sort the <u>GTF</u> file: <u>Tools</u> ➔ <u>Run igvtools…</u></li>
 <li>Set the <em>Command</em> option to <em>Sort.</em></li>
-<li>Browse the <u>GTF</u> file. The output file will have the same name but ending with “.sorted.gtf”. (The directory where the sorted <u>GTF</u> will be placed should have a permission to be written by the user <code>IGV</code>. Writing is not allowed if you symlink the whole <code>/shared/08_Transcriptomics_part_1/</code> or <code>/shared/08_Transcriptomics_part_1/0004_genome/</code> directories and not the actual <u>GTF</u> file itself.)</li>
+<li>Browse the <u>GTF</u> file. The output file will have the same name but ending with “.sorted.gtf”. (The directory where the sorted <u>GTF</u> will be placed should have a permission to be written by the user <code>IGV</code>. Writing is <strong>not</strong> allowed if you symlink the whole <code>/shared//shared/OMICS/practical_07/</code> or <code>/shared/OMICS/practical_07/0004_genome/</code> directories and not the actual <u>GTF</u> file itself.)</li>
 <li>Click on the <u>Run</u> button.</li>
 <li>Close the box after finishing.</li>
 </ol></li>
