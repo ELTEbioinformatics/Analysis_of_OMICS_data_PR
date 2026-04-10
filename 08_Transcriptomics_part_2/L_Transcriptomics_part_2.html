@@ -1450,7 +1450,7 @@ variance\left ( Y_{i} \right ) = \mu_{i} \left ( 1 + \mu_{i} \varphi_{i} \right 
 </ul></li>
 <li><u>edgeR</u>’s <strong>TMM</strong>: <em>Trimmed Mean of M-values</em>
 <ul>
-<li>Normalizes the counts by the total number of reads in the library and the length of the gene.</li>
+<li>Normalizes samples using a trimmed mean of log-fold changes between samples (<em>M</em>) to correct for library size and RNA-composition differences.</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:2%;">
@@ -2508,7 +2508,7 @@ Number of Fisher Scoring iterations: 4
 <li><span class="math inline">\(μ^2\)</span>: the square of the mean</li>
 <li><span class="math inline">\(ϕ\)</span>: the dispersion parameter, which allows the variance to be larger than the mean (<em>phi</em>)</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href></a>nb_fit <span class="ot">&lt;-</span> <span class="fu">glm.nb</span>(count <span class="sc">~</span> condition, <span class="at">data =</span> example_dat)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href></a>nb_fit <span class="ot">&lt;-</span> MASS<span class="sc">::</span><span class="fu">glm.nb</span>(count <span class="sc">~</span> condition, <span class="at">data =</span> example_dat)</span>
 <span id="cb3-2"><a href></a><span class="fu">summary</span>(nb_fit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <pre style="font-size:0.58em; line-height:1.05; font-family: monospace; white-space: pre;">Call:
 glm.nb(formula = count ~ condition, data = example_dat, init.theta = 38.21519995, 

@@ -2546,7 +2546,7 @@ window.Quarto = {
 <tr class="odd">
 <td>edgeR’s <strong>trimmed mean of M values (TMM)</strong></td>
 <td>uses a weighted trimmed mean of the log expression ratios between samples</td>
-<td>sequencing depth, RNA composition, and gene length</td>
+<td>sequencing depth and RNA composition</td>
 <td>gene count comparisons between and within samples, and for <strong>DE analysis</strong></td>
 </tr>
 </tbody>
@@ -3151,7 +3151,7 @@ colData names(2): source_name group</code></pre>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>DEresults <span class="ot">&lt;-</span> DEresults[<span class="fu">order</span>(DEresults<span class="sc">$</span>pvalue), ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Thus, we have obtained a table of the differential expression status of case samples relative to control samples.</p>
-<p>It is important to note that the sequence of the elements in the <em>contrast</em> argument determines which group of samples is used as the <em>control</em>. This impacts how the results are interpreted; for instance, if a gene is found <em>up-regulated</em> (has a <em>positive <span class="math inline">\(log_{2}\)</span> fold change</em>), its up-regulation status is only relative to the factor provided as the <em>control</em>. In this case, we used samples from the <em>CTRL</em> group as <em>controls</em> and contrasted the samples from the <em>CASE</em> group with them. Thus, genes with a positive <span class="math inline">\(log_{2}\)</span> fold change are called up-regulated in the case samples with respect to the control, while genes with a negative <span class="math inline">\(log_{2}\)</span> fold change are down-regulated in the case samples. Whether the deregulation is significant or not warrants an assessment of the adjusted <em>p</em>-values.</p>
+<p>It is important to note that the sequence of the elements in the <em>contrast</em> argument determines which group of samples is used as the <em>control</em>. This impacts how the results are interpreted; for instance, if a gene is found <em>up-regulated</em> (has a <em>positive</em> <span class="math inline">\(log_{2}\)</span> fold change), its up-regulation status is only relative to the factor provided as the <em>control</em>. In this case, we used samples from the <em>CTRL</em> group as <em>controls</em> and contrasted the samples from the <em>CASE</em> group with them. Thus, genes with a positive <span class="math inline">\(log_{2}\)</span> fold change are called up-regulated in the case samples with respect to the control, while genes with a negative <span class="math inline">\(log_{2}\)</span> fold change are down-regulated in the case samples. Whether the deregulation is significant or not warrants an assessment of the adjusted <em>p</em>-values.</p>
 <p>Let’s have a look at the contents of the <code>DEresults</code> table.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># shows a summary of the results</span></span>
